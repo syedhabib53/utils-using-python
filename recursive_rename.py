@@ -7,7 +7,6 @@ __author__ = 'Syed Habib M'
 
 
 def rename_recursive(path, from_name, to_name):
-    _names = []
     for dirname, dirnames, filenames in os.walk(path, topdown=False):
         print "Checking %s" % os.path.abspath(dirname)
         _from_name = os.path.join(dirname, from_name)
