@@ -1,5 +1,6 @@
 
 import os
+import shutil
 import optparse
 
 
@@ -19,7 +20,7 @@ def rm_recursive(path, rm_dir=None, rm_file=None):
         print "Checking %s" % (os.path.join(path, dirname))
         if rm_dir in dirnames:
             print "Removing Directory %s" % (os.path.join(dirname, rm_dir))
-            os.rmdir(os.path.join(dirname, rm_dir))
+            shutil.rmtree(os.path.join(dirname, rm_dir))
         if rm_file in filenames:
             print "Removing File %s" % (os.path.join(dirname, rm_file))
             os.remove(os.path.join(dirname, rm_file))
